@@ -10,6 +10,7 @@
     {"id":{"name":"fnt_mont_regular_16","path":"fonts/fnt_mont_regular_16/fnt_mont_regular_16.yy",},"order":1,},
     {"id":{"name":"fnt_mont_regular_40","path":"fonts/fnt_mont_regular_40/fnt_mont_regular_40.yy",},"order":3,},
     {"id":{"name":"snd_straight","path":"sounds/snd_straight/snd_straight.yy",},"order":3,},
+    {"id":{"name":"rm_level5","path":"rooms/rm_level5/rm_level5.yy",},"order":5,},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},"order":8,},
     {"id":{"name":"spr_finish","path":"sprites/spr_finish/spr_finish.yy",},"order":3,},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},"order":1,},
@@ -69,6 +70,7 @@
     {"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},
     {"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},
     {"name":"rm_level4","path":"rooms/rm_level4/rm_level4.yy",},
+    {"name":"rm_level5","path":"rooms/rm_level5/rm_level5.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

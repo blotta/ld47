@@ -5,6 +5,7 @@ function RotatingState(){
 	if mouse_check_button_pressed(mb_left) {
 		speed = abs(pivot_angvel) * pivot_radius / (room_speed * room_speed);
 		state = PlayerState.STRAIGHT;
+		image_blend = $FF00A4E5;
 		audio_play_sound(snd_straight, 5, false);
 		return;
 	}

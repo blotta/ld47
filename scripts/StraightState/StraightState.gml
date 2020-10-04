@@ -25,6 +25,7 @@ function StraightState(){
 		pivot_x = x + lengthdir_x(pivot_radius, direction + 90 * sign(pivot_angvel));
 		pivot_y = y + lengthdir_y(pivot_radius, direction + 90 * sign(pivot_angvel));
 		state = PlayerState.ROTATING;
+		image_blend = c_white;
 		audio_play_sound(snd_rotating, 5, false);
 	}
 }
