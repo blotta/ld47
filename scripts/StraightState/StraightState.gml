@@ -15,6 +15,8 @@ function StraightState(){
 		pivot_x = x + lengthdir_x(pivot_radius, direction + 90 * sign(pivot_angvel));
 		pivot_y = y + lengthdir_y(pivot_radius, direction + 90 * sign(pivot_angvel));
 		pivot_angle = point_direction(pivot_x, pivot_y, x, y);
+		
+		audio_play_sound(snd_bounce, 5, false);
 	}
 	
 	if (mouse_check_button_released(mb_left)) {
@@ -23,5 +25,6 @@ function StraightState(){
 		pivot_x = x + lengthdir_x(pivot_radius, direction + 90 * sign(pivot_angvel));
 		pivot_y = y + lengthdir_y(pivot_radius, direction + 90 * sign(pivot_angvel));
 		state = PlayerState.ROTATING;
+		audio_play_sound(snd_rotating, 5, false);
 	}
 }

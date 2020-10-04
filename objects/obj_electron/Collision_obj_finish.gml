@@ -1,4 +1,5 @@
 /// @description Finished level
+audio_play_sound(snd_finish, 5, false);
 
 state = PlayerState.FINISHED;
 speed = 0;

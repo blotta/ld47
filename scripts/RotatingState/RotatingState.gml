@@ -5,6 +5,7 @@ function RotatingState(){
 	if mouse_check_button_pressed(mb_left) {
 		speed = abs(pivot_angvel) * pivot_radius / (room_speed * room_speed);
 		state = PlayerState.STRAIGHT;
+		audio_play_sound(snd_straight, 5, false);
 		return;
 	}
 
@@ -30,6 +31,9 @@ function RotatingState(){
 		
 		pivot_angvel = -pivot_angvel;
 		pivot_angle = partial_angle;
+		
+		// bounced
+		audio_play_sound(snd_bounce, 5, false);
 	}
 	
 	// Apply

@@ -9,4 +9,6 @@ text = "Button Text";
 
 hover = 0; // 0 to 1
 
+prev_hover = false;
+
 on_click = function() {}

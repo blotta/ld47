@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_electron",
-    "path": "sprites/spr_electron/spr_electron.yy",
+    "name": "spr_electron2",
+    "path": "sprites/spr_electron2/spr_electron2.yy",
   },
   "solid": false,
   "visible": true,

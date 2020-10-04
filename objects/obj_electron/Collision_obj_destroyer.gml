@@ -1,4 +1,6 @@
 /// @description Die instantly
+audio_play_sound(snd_explosion, 5, false);
+
 state = PlayerState.EXPLODED;
 speed = 0;
 visible = false;
