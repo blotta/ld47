@@ -11,5 +11,6 @@ prev_hover = _hover;
 // Click
 if (_click) {
 	audio_play_sound(snd_select, 10, false);
-	on_click();	
+	on_click();
+	//script_execute(on_click);
 }

@@ -16,22 +16,36 @@ function _level_menu(msg){
 	
 	var btn_w = 100;
 	var btn_h = 40;
+	var pos2 = panel.x + ((panel.x2 - panel.x) * (1/2)) - (btn_w / 2);
+	var pos3 = panel.x + ((panel.x2 - panel.x) * (3/4)) - (btn_w / 2);
+
 	var next_btn = gui_button_create(
-		panel.x + ((panel.x2 - panel.x) * (3/4)) - (btn_w / 2),
+		//panel.x + ((panel.x2 - panel.x) * (3/4)) - (btn_w / 2),
+		msg == "PASSED" or msg == "PAUSED" ? pos3 : pos2,
 		panel.y2 - 120 + (btn_h / 2),
 		btn_w, btn_h,
 		"NEXT",
-		_next_level,
+		//_next_level,
+		function() {
+			if room != room_last {
+			//if room_next(room) != -1 {
+				room_goto_next();
+			} else {
+				room_goto(rm_menu);
+			}
+		},
 		layer);
 	next_btn.depth = panel.depth - 10;
 	ds_list_add(level_menu_elems, next_btn);
 	
 	var retry_btn = gui_button_create(
-		panel.x + ((panel.x2 - panel.x) * (1/2)) - (btn_w / 2),
+		//panel.x + ((panel.x2 - panel.x) * (1/2)) - (btn_w / 2),
+		msg == "PASSED" or msg == "PAUSED" ? pos2 : pos3,
 		panel.y2 - 120 + (btn_h / 2),
 		btn_w, btn_h,
 		"RETRY",
-		_retry_level,
+		//_retry_level,
+		function () { room_goto(room); },
 		layer);
 	retry_btn.depth = panel.depth - 10;
 	ds_list_add(level_menu_elems, retry_btn);
@@ -41,7 +55,8 @@ function _level_menu(msg){
 		panel.y2 - 120 + (btn_h / 2),
 		btn_w, btn_h,
 		"BACK",
-		_back_to_menu,
+		//_back_to_menu,
+		function () { room_goto(rm_menu); },
 		layer);
 	back_btn.depth = panel.depth - 10;
 	ds_list_add(level_menu_elems, back_btn);
@@ -61,18 +76,18 @@ function _level_menu(msg){
 	ds_list_add(level_menu_elems, label);
 }
 
-function _next_level() {
-	if room_next(room) != -1 {
-		room_goto_next();
-	} else {
-		room_goto(rm_menu);
-	}
-}
+//function _next_level() {
+//	if room_next(room) != -1 {
+//		room_goto_next();
+//	} else {
+//		room_goto(rm_menu);
+//	}
+//}
 
-function _retry_level() {
-	room_goto(room);
-}
+//function _retry_level() {
+//	room_goto(room);
+//}
 
-function _back_to_menu() {
-	room_goto(rm_menu);
-}
+//function _back_to_menu() {
+//	room_goto(rm_menu);
+//}
