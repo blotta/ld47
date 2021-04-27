@@ -1,6 +1,8 @@
-draw_set_alpha(0.5);
+// draw_set_alpha(0.5);
+shader_set(shd_blur);
 draw_circle_color(pivot_x, pivot_y, pivot_radius, c_aqua, c_aqua, true);
-draw_set_alpha(1);
+shader_reset();
+// draw_set_alpha(1);
 draw_self();
 
 // NOSE
